@@ -143,6 +143,7 @@ ul {
     border-radius: 50%;
     color: var(--clr-neutral-300);
     transition: all .3s ease-in-out;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -156,6 +157,7 @@ ul {
 }
 
 .btn-submit {
+    cursor: pointer;
     width: 100%;
     border: none;
     padding: .5rem 2rem;
