@@ -5,11 +5,6 @@ const restartButtonEl = document.getElementById("revote")
 const ratingButtonEl = document.querySelectorAll(".btn")
 const userSelectionEl = document.querySelector(".rating-selected")
 
-submitButtonEl.addEventListener("click", () => {
-    ratingCardEl.classList.add("hidden")
-    resultCardEl.classList.remove("hidden")
-})
-
 restartButtonEl.addEventListener("click", () => {
     ratingCardEl.classList.remove("hidden")
     resultCardEl.classList.add("hidden")
@@ -18,5 +13,9 @@ restartButtonEl.addEventListener("click", () => {
 ratingButtonEl.forEach(rating => {
     rating.addEventListener("click", () => {
         userSelectionEl.innerHTML = rating.innerHTML
+        submitButtonEl.addEventListener("click", () => {
+            ratingCardEl.classList.add("hidden")
+            resultCardEl.classList.remove("hidden")
+        })
     })
 });
